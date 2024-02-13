@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import homeData from '../../assets/mockdata/home.json';
+import { ModalController } from '@ionic/angular';
+import { DrawerService } from '../services/drawer.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +10,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  sections = homeData.sections;
+	spotlight = homeData.spotlight;
+
+	opts = {
+		slidesPerView: 2.4,
+		spaceBetween: 10,
+		freeMode: true
+	};
+
+  constructor(private modalCtrl: ModalController, private drawerService: DrawerService) {}
+
+  async openCategories() {}
 
 }
