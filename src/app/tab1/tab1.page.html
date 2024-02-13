@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<ion-header #header class="ion-no-border">
   <ion-toolbar>
     <img src="/assets/mockdata/logo.png" class="logo">
     <ion-row class="ion-justify-content-center">
@@ -11,7 +11,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="header">
   <div
     class="spotlight"
 		[style.background-image]="'url(/assets/mockdata/'+spotlight.id+'-cover.jpg)'"

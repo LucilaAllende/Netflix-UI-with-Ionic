@@ -6,8 +6,8 @@ import { Tab1Page } from './tab1.page';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { SharedComponentsModule } from '../components/shared-components.module';
-import { ModalPage } from '../modal/modal.page';
 import { ModalPageModule } from '../modal/modal.module';
+import { SharedDirectivesModule } from '../directives/shared-directives.module';
 
 @NgModule({
   imports: [
@@ -16,7 +16,8 @@ import { ModalPageModule } from '../modal/modal.module';
     FormsModule,
     Tab1PageRoutingModule,
     SharedComponentsModule,
-    ModalPageModule
+    ModalPageModule,
+    SharedDirectivesModule
   ],
   declarations: [Tab1Page],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
