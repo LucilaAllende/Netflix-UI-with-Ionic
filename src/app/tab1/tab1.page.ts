@@ -3,6 +3,19 @@ import homeData from '../../assets/mockdata/home.json';
 import { ModalController } from '@ionic/angular';
 import { DrawerService } from '../services/drawer.service';
 
+interface ISerie {
+  id: number;
+  title?: string;
+  season?: string;
+  progress?: number;
+}
+
+interface ISection {
+  title: string;
+  type: string;
+  series: ISerie[];
+}
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -10,17 +23,13 @@ import { DrawerService } from '../services/drawer.service';
 })
 export class Tab1Page {
 
-  sections = homeData.sections;
+  sections: ISection[] = homeData.sections;
 	spotlight = homeData.spotlight;
-
-	opts = {
-		slidesPerView: 2.4,
-		spaceBetween: 10,
-		freeMode: true
-	};
 
   constructor(private modalCtrl: ModalController, private drawerService: DrawerService) {}
 
   async openCategories() {}
+
+  openInfo(serie: ISerie){}
 
 }

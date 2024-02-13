@@ -64,3 +64,24 @@ ion-toolbar {
 		rgba(0, 0, 0, 0) 100%
 	);
 }
+
+.section-title {
+  font-weight: 600;
+  font-size: large;
+}
+
+swiper-slide {
+	margin-top: 4px;
+  .continue {
+    background: #191919;
+    .progress-bar {
+      height: 2px;
+      width: 100%;
+      background: #262626;
+      .progress {
+        background: #e40a15;
+        height: 100%;
+      }
+    }
+  }
+}
