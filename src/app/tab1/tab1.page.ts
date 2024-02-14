@@ -39,6 +39,8 @@ export class Tab1Page {
 		await modal.present();
 	}
 
-  openInfo(serie: ISerie){}
+  openInfo(serie: ISerie){
+    this.drawerService.openDrawer(serie.title || '');
+  }
 
 }
