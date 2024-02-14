@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import homeData from '../../assets/mockdata/home.json';
 import { ModalController } from '@ionic/angular';
 import { DrawerService } from '../services/drawer.service';
+import { ModalPage } from '../modal/modal.page';
 
 interface ISerie {
   id: number;
@@ -28,7 +29,15 @@ export class Tab1Page {
 
   constructor(private modalCtrl: ModalController, private drawerService: DrawerService) {}
 
-  async openCategories() {}
+  async openCategories() {
+    console.log('openCategories');
+		const modal = await this.modalCtrl.create({
+			component: ModalPage,
+			cssClass: 'transparent-modal',
+		});
+
+		await modal.present();
+	}
 
   openInfo(serie: ISerie){}
 

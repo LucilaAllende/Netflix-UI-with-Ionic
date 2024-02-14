@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import categoryData from '../../assets/mockdata/categories.json';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-modal',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalPage implements OnInit {
 
-  constructor() { }
+	categories = categoryData;
 
-  ngOnInit() {
-  }
+  constructor(private modalCtrl: ModalController) { }
+
+  ngOnInit() {}
+
+  dismiss() {
+		this.modalCtrl.dismiss();
+	}
 
 }
